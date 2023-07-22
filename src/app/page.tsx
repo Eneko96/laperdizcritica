@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 async function getMockData() {
-  const res = await new Promise((res,rej) => res(5))
+  const res = await new Promise((res, rej) => res(5))
   const image = await fetch('https://picsum.photos/275/650')
   return {
     count: res,
@@ -10,7 +10,7 @@ async function getMockData() {
 }
 
 export default async function Home() {
-  const { count, image} = await getMockData();
+  const { count, image } = await getMockData();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -26,9 +26,23 @@ export default async function Home() {
           </div>
         </div>
         <div className="min-w-0 scroll-margin-top: 56px">
-          <div className="b-1 rounded-md bg-yellow-100 h-50">
+          <div className="b-1 rounded-md bg-white h-50">
             <div className="h-full w-full aspect-auto object-scale-down rounded-t-md">
-              <Image src='https://picsum.photos/275/650' alt="Presentation image" width={650} height="275" className="w-full aspect-auto object-scale-down rounded-t-md"/>
+              <Image src='https://picsum.photos/650/275' alt="Presentation image" width={650} height="275" className="w-full aspect-auto object-scale-down rounded-t-md" />
+              <div className="p-5">
+                <div className="flex items-center">
+                  <div className="relative mr-2">
+                    <a className="w-7 h-7">
+                      <Image alt="Person profile" src="https://picsum.photos/32/32" width={32} height={32} className="w-full h-full inline-block rounded-xl" />
+                    </a>
+                  </div>
+                  <div>
+                    <div>Name Surname</div>
+                    <a className="text-grey-100 font-xs">{Intl.DateTimeFormat('default', { day: '2-digit', month: 'short' }).format(Date.now())}</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
