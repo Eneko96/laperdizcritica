@@ -2,3 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --transition-story-tag: cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
+  font-family: system-ui;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@layer components {
+  .story-tag {
+    background: transparent;
+    color: "";
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    transition: all var(--transition-story-tag);
+    padding: clamp(0.25rem, 0.25em, 0.5em) 0.5em;
+  }
+
+  .story-tag:hover {
+    background: rgba(23, 23, 23, 0.05);
+    color: rgb(23, 23, 23);
+    box-shadow:
+      inset 0 0 0 1px rgba(23, 23, 23, 0.05),
+      inset 0 0 0 1px rgba(23, 23, 23, 0.05),
+      inset 0 0 0 1px rgba(23, 23, 23, 0.05);
+  }
+
+  .transition-button {
+    transition: all var(--transition-story-tag);
+  }
+
+  .shadow-card {
+    box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.05);
+  }
+  .header-shadow {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
