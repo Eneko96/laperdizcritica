@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full px-4 items-center bg-white h-[56px] fixed header-shadow">
+    <header className="w-full px-4 items-center bg-white h-[56px] fixed header-shadow left-0 top-0 right-0">
       <div className="max-w-[1280px] flex m-auto h-full w-auto items-center px-4">
         <Image src="/lpc.jpg" width={50} height={40} alt="Website logo" />
         <input

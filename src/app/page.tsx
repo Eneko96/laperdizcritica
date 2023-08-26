@@ -12,7 +12,6 @@ async function getMockData() {
 
 export default async function Home() {
   const { count, image } = await getMockData();
-  console.log(count, image);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
