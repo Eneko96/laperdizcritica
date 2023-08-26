@@ -1,3 +1,9 @@
+const actions = new Map([
+  ["like", "text-[#dc2626]"],
+  ["comment", "text-[#F59E0B]"],
+  ["save", "text-[#4f46E5]"],
+]);
+
 export default async function Article() {
   return (
     <div>
@@ -5,9 +11,9 @@ export default async function Article() {
         <aside className="block row-end-initial w-[4rem]">
           <div className="actions p-0 bg-[rgb_245_245_245] grid gap-6 sticky shadow-none justify-stretch top-[129px]">
             <div className="grid gap-4 justify-stretch">
-              {[1, 2, 3].map((_) => (
-                <div key={_} className="flex flex-col">
-                  <button className="relative inline-flex flex-col items-center hover:text-[#dc2626]">
+              {Array.from(actions).map(([key, value], idx) => (
+                <div key={`key_${key}`} className="flex flex-col">
+                  <button className="relative inline-flex flex-col items-center">
                     <span className="p-2 text-[#3d3d3d] transitions-all">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +23,7 @@ export default async function Article() {
                         fill="none"
                         role="img"
                         aria-hidden="true"
-                        className="crayons-icon fill-current hover:text-[#dc2626] transition-all"
+                        className={`crayons-icon fill-current hover:${value} transition-all`}
                       >
                         <g
                           clip-path="url(#clip0_988_3276)"
@@ -37,7 +43,7 @@ export default async function Article() {
                       </svg>
                     </span>
                     <span className="w-[40px] h-[40px] p-2 transition-all text-[#575757] text-sm">
-                      {_ + 10}
+                      {idx + 10}
                     </span>
                   </button>
                 </div>
@@ -45,7 +51,17 @@ export default async function Article() {
             </div>
           </div>
         </aside>
-        <main></main>
+        <main className="scroll-mt-[56px] grid gap-4">
+          <div className="min-w-0">
+            <div className="b-1 rounded-md bg-white h-50 mb-2 shadow-card">
+              <header>
+                <div className="article-meta p-x-[64px] pt-[32px]">
+                  <div className="flex s:items-start flex-col s:flex-row"></div>
+                </div>
+              </header>
+            </div>
+          </div>
+        </main>
         <aside></aside>
       </div>
     </div>
