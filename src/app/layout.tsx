@@ -22,10 +22,7 @@ export default function RootLayout({
         <title>La perdiz critica</title>
         <meta property="og:title" content="La perdiz critica" key="title" />
       </Head>
-      <body className={inter.className}>
-        <Header />
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

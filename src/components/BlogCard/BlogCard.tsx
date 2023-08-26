@@ -49,7 +49,12 @@ export const BlogCard = ({ image }: { image: number }) => {
         </div>
         <div className="story pl-7">
           <h3 className="break-words text-2xl text-[#171717] font-bold mb-1">
-            Article title {image}
+            <a
+              className="text-inherit block hover:text-[#2F3AB2] hover:transition-colors cursor-pointer"
+              href="/article"
+            >
+              Article title {image}
+            </a>
           </h3>
           <div className="story-tags mb-2 font-sm flex wrap gap-[1px] text-gray-800 ml-[-4px]">
             <a className="story-tag text-sm">#sometag</a>

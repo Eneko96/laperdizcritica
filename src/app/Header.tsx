@@ -10,7 +10,7 @@ export default function Header() {
           placeholder="Search..."
           className="input input-bordered w-full max-w-md ml-5 h-10"
         />
-        <div className="flex items-center m-auto gap-4">
+        <div className="flex items-center ml-auto gap-4">
           <a className="ml-20 h-10 text-base hover:text-[#2f3ab2] py-2 px-4 hover:bg-[#3B49DF19] hover:rounded-md">
             Log in
           </a>
