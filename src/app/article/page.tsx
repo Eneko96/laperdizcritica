@@ -75,7 +75,7 @@ export default async function Article() {
                           href="/pavanbelagatti"
                           className="story-link font-bold text-base hover:text-[#336699]"
                         >
-                          Fina Ramos
+                          Gnefaugh Surname
                         </a>
                         <p className="text-xs text-gray-500">
                           Posted on{" "}
@@ -192,7 +192,7 @@ export default async function Article() {
                     />
                   </span>
                   <span className="crayons-link crayons-subtitle-2 mt-5 text-xl font-bold">
-                    Fina Ramos
+                    Gnefaugh Surname
                   </span>
                 </a>
               </div>
