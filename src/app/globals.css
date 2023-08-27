@@ -56,4 +56,9 @@ h6 {
   .grid-custom {
     grid-template-rows: min-content 1fr min-content;
   }
+  .content-p {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+  }
 }
