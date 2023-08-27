@@ -150,6 +150,28 @@ export default async function Article() {
                   plan para la esclavitud global de la humanidad bajo la bota de
                   los maestros corporativos
                 </p>
+                <h3 className="content-h3">Test para titulo</h3>
+                <ol className="content-ol">
+                  <li className="content-li">
+                    <strong> La Agenda 2030</strong> de las Naciones Unidas
+                    decodificada: es un plan para la esclavitud global de la
+                    humanidad bajo la bota de los maestros corporativos
+                  </li>
+
+                  <li className="content-li">
+                    (NaturalNews) Esta semana, Michael Snyder publicó un
+                    importante artículo titulado La Agenda 2030: este mes La ONU
+                    lanza un plan para un nuevo orden mundial con la ayuda del
+                    Papa.
+                  </li>
+
+                  <li className="content-li">
+                    Ese artículo hace referencia a este documento de la
+                    &quot;Agenda 2030&quot; de la ONU que impulsa un plan para
+                    el llamado &quot;desarrollo sostenible&quot; en todo el
+                    mundo.
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
