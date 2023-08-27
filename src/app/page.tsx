@@ -36,7 +36,7 @@ export default async function Home() {
         </div>
         <div className="min-w-0 scroll-margin-top: 56px">
           {[1, 2, 3, 4, 5].map((_) => (
-            <BlogCard image={_} key={_} />
+            <BlogCard isSaved={_ % 2 === 0 ? false : true} image={_} key={_} />
           ))}
         </div>
         <div className="min-w-0 w-[1fr]">

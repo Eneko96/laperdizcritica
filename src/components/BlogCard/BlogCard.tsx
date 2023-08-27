@@ -8,7 +8,13 @@ const imgs = [
   "https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg",
 ];
 
-export const BlogCard = ({ image }: { image: number }) => {
+export const BlogCard = ({
+  image,
+  isSaved,
+}: {
+  image: number;
+  isSaved: boolean;
+}) => {
   return (
     <div className="b-1 rounded-md bg-white h-50 mb-2 shadow-card">
       <div className="h-full w-full aspect-auto object-scale-down rounded-t-md">
@@ -103,14 +109,16 @@ export const BlogCard = ({ image }: { image: number }) => {
           </div>
           <div className="story-save flex items-center">
             <small className="text-xs mr-2 text-[#525252]">2 min read</small>
-            <button className="p-2 hover:bg-[#3B49DF1A] relative inline-block rounded-sm items-center cursor-pointer border-none">
+            <button className="p-2 hover:bg-[#3B49DF1A] relative inline-block rounded-md items-center cursor-pointer border-none">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 width="24"
                 height="24"
                 xmlns="http://www.w3.org/2000/svg"
-                className="crayons-icon c-btn__icon  "
+                className={`crayons-icon c-btn__icon ${
+                  isSaved ? "fill-[#245cfd]" : "fill-inherit"
+                }`}
               >
                 <path d="M6.75 4.5h10.5a.75.75 0 0 1 .75.75v14.357a.375.375 0 0 1-.575.318L12 16.523l-5.426 3.401A.375.375 0 0 1 6 19.607V5.25a.75.75 0 0 1 .75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z"></path>
               </svg>
